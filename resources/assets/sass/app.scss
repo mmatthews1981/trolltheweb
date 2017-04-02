@@ -18,6 +18,9 @@ body{
 	font-size: 22px;
 	color: $secondary;
 	text-align: center;
+	@media screen and (max-width: 999px) {
+	    font-size: 18px;
+	}
 }
 
 h1{
