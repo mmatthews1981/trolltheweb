@@ -12,5 +12,57 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+
+	$quote = App\Quote::inRandomOrder()->first();
+    
+    return view('welcome', compact('quote'));
 });
+
+Route::get('/about', function () {
+
+    return view('about');
+
+});
+
+Route::get('/test', function () {
+
+    return view('test');
+
+});
+
+Route::get('/api/random', function() {
+
+	$quote = App\Quote::inRandomOrder()->first();
+
+	return $quote;
+
+});
+
+Route::get('/api/{id}', function($id) {
+
+	$quote = App\Quote::where('id', $id)->get();
+
+	return $quote;
+
+});
+
+Route::get('/quote/{id}', function($id) {
+
+	$quote = App\Quote::where('id', $id)->first();
+
+	return view('single', compact('quote'));
+
+});
+
+// Route::get('/add', function () {
+
+// 	$quote = new App\Quote;
+// 	$quote->body = 'PHP is alive and there’s little reason to jump on the Node.js bandwagon because it looks faster, newer or trendier. PHP is easier to learn yet supports proficient professional programming techniques. Assistance is everywhere and deployment is simple. Even die-hard Node.js developers should consider PHP for simpler websites and apps.';
+// 	$quote->author = 'Craig Buckler';
+// 	$quote->author_link = 'https://www.sitepoint.com/author/craig-buckler/';
+// 	$quote->source = 'https://www.sitepoint.com/sitepoint-smackdown-php-vs-node-js/';
+
+// 	$quote->save();
+    
+//     return "saved";
+// });

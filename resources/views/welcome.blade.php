@@ -66,29 +66,28 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
                 <div class="top-right links">
-                    @if (Auth::check())
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
-                    @endif
+                    <a href="{{ url('/about') }}">About</a>
+                    <a href="{{ url('/api') }}">API</a>
                 </div>
-            @endif
+
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    PHP Does Not Suck
                 </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+                <p>
+                    {{ $quote->body }}
+                </p>
+                <p>
+                    <a href="{{ $quote->author_link }}">{{ $quote->author }}</a>
+                </p>
+                <p>
+                    <a href="{{ $quote->source }}">Source</a>
+                </p>
+                <p>
+                    <a href="{{ url('/quote/'.$quote->id) }}">Direct Link</a>
+                </p>
             </div>
         </div>
     </body>
