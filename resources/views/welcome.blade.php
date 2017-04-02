@@ -18,24 +18,41 @@
     </head>
     <body>
         <div class="container-fluid">
-            <div class="pull-right navigation">
-                <a href="{{ url('/about') }}">About</a>
-                <a href="{{ url('/api') }}">API</a>
+            <div class="row">
+                <div class="pull-right navigation">
+                    <a href="{{ url('/about') }}">About</a>
+                    <a href="{{ url('/api') }}">API</a>
+                </div>
             </div>
         </div>
 
         <div class="container main">
             <div class="content">
-                <div class="title">
-                    <h1>PHP Does Not Suck</h1>
-                    <img class="logo" src="img/logo.png" alt="PHP Does Not Suck" />
+                <div class="row">
+                    <div class="title">
+                        <h1>PHP Does Not Suck</h1>
+                        <img class="logo" src="img/logo.png" alt="PHP Does Not Suck" />
+                    </div>
                 </div>
-                <div class="quote">
-                    {{ $quote->body }} <a href="{{ url('/quote/'.$quote->id) }}">#</a>
-                </div>
-                <div class="attribution">
-                    <div><a class="link" href="{{ $quote->author_link }}">{{ $quote->author }}</a></div>
-                    <div><a class="btn btn-primary link" href="{{ $quote->source }}">Source</a></div>
+                
+                <div class="row">
+                    <div class="col-md-2 quotationmarks">
+                        &#8220
+                    </div>
+
+                    <div class="col-md-8">
+                        <div class="quote">
+                            {{ $quote->body }} <a href="{{ url('/quote/'.$quote->id) }}">#</a>
+                        </div>
+                        <div class="attribution">
+                            <div><a class="link" href="{{ $quote->author_link }}">{{ $quote->author }}</a></div>
+                            <div><a class="btn btn-primary link" href="{{ $quote->source }}">Source</a></div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2 quotationmarks">
+                        &#8221
+                    </div>
                 </div>
 
             </div>

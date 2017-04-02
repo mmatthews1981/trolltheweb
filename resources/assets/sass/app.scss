@@ -60,7 +60,6 @@ a {
 }
 
 .content {
-	border: 2px dotted $primary;
 	padding: 50px;
 
 	.title {
@@ -68,7 +67,6 @@ a {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		
 	}
 
 	.logo {
@@ -77,11 +75,16 @@ a {
 	}
 
 	.quote {
-		max-width: 700px;
 		margin: 15px auto;
 	}
-	.attribution {
 
+	.quotationmarks {
+		color: $primary;
+		font-size: 350px;
+    	line-height: 1em;
+	}
+
+	.attribution {
 		a{
 			margin: 15px; 
 		}
