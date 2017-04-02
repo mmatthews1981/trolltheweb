@@ -28,6 +28,10 @@ h1{
     display: inline-block;
     margin: 0;
     padding: 7px 25px;
+
+    @media screen and (max-width: 999px) {
+	    font-size: 50px;
+	}
 }
 
 a {
@@ -75,7 +79,7 @@ a {
 	}
 
 	.quote {
-		margin: 15px auto;
+		margin: 15px auto 50px auto;
 		&.about, &.api {
 			text-align: left;
 		}
@@ -85,6 +89,9 @@ a {
 		color: $primary;
 		font-size: 350px;
     	line-height: 1em;
+    	@media screen and (max-width: 999px) {
+		    display: none;
+		}
 	}
 
 	.attribution {
@@ -96,7 +103,9 @@ a {
 }
 
 #footer {
-	position: fixed;
+    position: fixed;
     bottom: 0;
     left: 0;
+    background-color: #fff;
+    width: 100%;
 }
