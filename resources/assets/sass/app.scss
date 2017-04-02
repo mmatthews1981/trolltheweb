@@ -8,6 +8,10 @@
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
+.btn{
+	border-radius: 0px;
+}
+
 body{
 	background-color: $body-bg;
 	font-family: "Scope One";
@@ -32,16 +36,61 @@ a {
 	&:hover{
 		color: $primary;
 	}
+	&.source{
+		color: #fff;
+		background-color: $primary;
+		padding: 10px 20px;
+	}
+	&.link{
+		font-size: 26px;
+	}
 }
 
-.title {
-	margin: 0px auto;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.navigation {
+	font-size: 28px;
+	margin: 20px 0;
+	a{
+		display: inline-block;
+		margin: 0 15px;
+	}
 }
 
-.logo {
-	display: inline-block;
-	margin: 15px;
+.main {
+	position: relative
+}
+
+.content {
+	border: 2px dotted $primary;
+	padding: 50px;
+
+	.title {
+		margin: 0px auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		
+	}
+
+	.logo {
+		display: inline-block;
+		margin: 15px;
+	}
+
+	.quote {
+		max-width: 700px;
+		margin: 15px auto;
+	}
+	.attribution {
+
+		a{
+			margin: 15px; 
+		}
+	}
+
+}
+
+#footer {
+	position: fixed;
+    bottom: 0;
+    left: 0;
 }

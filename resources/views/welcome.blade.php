@@ -18,30 +18,32 @@
     </head>
     <body>
         <div class="container-fluid">
-            <div class="pull-right">
+            <div class="pull-right navigation">
                 <a href="{{ url('/about') }}">About</a>
                 <a href="{{ url('/api') }}">API</a>
             </div>
         </div>
 
-        <div class="container">
+        <div class="container main">
             <div class="content">
                 <div class="title">
                     <h1>PHP Does Not Suck</h1>
                     <img class="logo" src="img/logo.png" alt="PHP Does Not Suck" />
                 </div>
-                <p>
-                    {{ $quote->body }}
-                </p>
-                <p>
-                    <a href="{{ $quote->author_link }}">{{ $quote->author }}</a>
-                </p>
-                <p>
-                    <a href="{{ $quote->source }}">Source</a>
-                </p>
-                <p>
-                    <a href="{{ url('/quote/'.$quote->id) }}">Direct Link</a>
-                </p>
+                <div class="quote">
+                    {{ $quote->body }} <a href="{{ url('/quote/'.$quote->id) }}">#</a>
+                </div>
+                <div class="attribution">
+                    <div><a class="link" href="{{ $quote->author_link }}">{{ $quote->author }}</a></div>
+                    <div><a class="btn btn-primary link" href="{{ $quote->source }}">Source</a></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="footer" class="container-fluid">
+            <div>
+                Curated and built by <a href="https://www.linkedin.com/in/meredithmatthews/">Mer</a>, Designed by <a href="http://theaxisofeva.com">Eva</a>
             </div>
         </div>
 
