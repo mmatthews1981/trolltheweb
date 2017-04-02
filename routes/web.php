@@ -24,15 +24,19 @@ Route::get('/about', function () {
 
 });
 
-Route::get('/test', function () {
+Route::get('/api', function() {
 
-    return view('test');
+	return view('api');
 
 });
+
 
 Route::get('/api/random', function() {
 
 	$quote = App\Quote::inRandomOrder()->first();
+
+	unset($quote->created_at);
+	unset($quote->updated_at);
 
 	return $quote;
 
@@ -41,6 +45,9 @@ Route::get('/api/random', function() {
 Route::get('/api/{id}', function($id) {
 
 	$quote = App\Quote::where('id', $id)->get();
+
+	unset($quote->created_at);
+	unset($quote->updated_at);
 
 	return $quote;
 

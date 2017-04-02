@@ -1,75 +1,26 @@
-<!DOCTYPE html>
-<html lang="{{ config('app.locale') }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layout')
 
-        <title>Laravel</title>
+@section('content')
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+    <div class="col-md-8">
+        <div class="quote about">
+            <p><strong>Is PHP so broken as to be unworkable? No. Clearly not. The great crime of PHP is its utter banality. Its continued propularity is living proof that quality is irrelevant; cheap and popular and everywhere always wins. PHP is the Nickelback of programming languages. --<a href="https://blog.codinghorror.com/the-php-singularity/">Jeff Atwood</a></strong></p>
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
+            <p>"Oh dear, you're a PHP developer? I'm so sorry!"</p>
 
-            .full-height {
-                height: 100vh;
-            }
+            <p>I have a confession to make. The name of this site is facetious. PHP totally sucks. And so do all the rest of the programming languages. Don't believe me? Go google any programming language you can think of and the word "sucks" and you'll have hours of reading, thousands of indignant programmers telling you in excruciating detail exactly why these languages are the literal worst.</p>
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
+            <p>Or you can cover all your bases and just read this: <a href="https://wiki.theory.org/YourLanguageSucks">Your Language Sucks</a>.</p>
 
-            .position-ref {
-                position: relative;
-            }
+            <p>PHP, however, seems reserved for a lot of special scorn right now. As a community, it's our favorite language to hate. It's the perpetual casualty of the ongoing language wars, thanks to the huge target it paints across the the internet.</p>
 
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
+            <p>Is all this hate based in reality? I don't think so. I think it's cultural. Programmers hate on PHP to bond with each other, to signal "I am a good programmer". PHP, and the people who work with it, have been thrown under the bus because programmers feel insecure about their own choices and abilities. Aurynn Shaw describes the phenomenon better than I ever could in <a href="http://blog.aurynn.com/contempt-culture">Contempt Culture</a>, and it's worth a read.</p>
 
-            .content {
-                text-align: center;
-            }
+            <p>So why put this site together? If this site annoys you simply by existing, this site is for you.</p>
 
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            <div class="content">
-                Inspired by <a href="https://quotesondesign.com/">Quotes on Design</a> and Aurynn Shaw's seminal blog post <a href="http://blog.aurynn.com/contempt-culture">Contempt Culture</a>. 
-            </div>
-            
+            <p>Much of the design and functionality of this site was inspired by <a href="https://quotesondesign.com/">Quotes on Design</a>. Thank you Chris Coyier for all the great ideas that I've shamelessly stolen.</p>
         </div>
-    </body>
-</html>
+
+    </div>
+
+@stop

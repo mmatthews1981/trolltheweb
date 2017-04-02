@@ -60,7 +60,7 @@ a {
 }
 
 .content {
-	padding: 50px;
+	padding: 25px 50px;
 
 	.title {
 		margin: 0px auto;
@@ -76,6 +76,9 @@ a {
 
 	.quote {
 		margin: 15px auto;
+		&.about, &.api {
+			text-align: left;
+		}
 	}
 
 	.quotationmarks {
