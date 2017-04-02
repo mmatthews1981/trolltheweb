@@ -9,5 +9,39 @@
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
 body{
-	background-color: $brand-primary;
+	background-color: $body-bg;
+	font-family: "Scope One";
+	font-size: 22px;
+	color: $secondary;
+	text-align: center;
+}
+
+h1{
+	font-family: "Unica One";
+    color: #fff;
+    background-color: #7c1f9a;
+    font-size: 79px;
+    display: inline-block;
+    margin: 0;
+    padding: 7px 25px;
+}
+
+a {
+	color: $primary;
+	font-family: "Unica One";
+	&:hover{
+		color: $primary;
+	}
+}
+
+.title {
+	margin: 0px auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.logo {
+	display: inline-block;
+	margin: 15px;
 }

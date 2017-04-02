@@ -1,6 +1,11 @@
 
 // Body
-$body-bg: #f5f8fa;
+$body-bg: #fff;
+
+//colors
+
+$primary: #7c1f9a; //purple
+$secondary: #353535; //gray
 
 // Borders
 $laravel-border-color: darken($body-bg, 10%);
